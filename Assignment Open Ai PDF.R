@@ -62,7 +62,8 @@ server <- function(input, output) {
     text_processed <- str_sub(text_processed, 1, 20000)
     
     # Get API key from environment variable
-    api_key <- Sys.getenv("OPENAI_API_KEY")
+    api_key <- read.table("C:/Users/mjsta/OneDrive - mjstaffingservice.com/Desktop/School/GBUS650/Rstudio/API Key", header=FALSE,stringsAsFactors=FALSE)[1,1]
+  
     
     # Get AI response for summary
     response <- POST(
